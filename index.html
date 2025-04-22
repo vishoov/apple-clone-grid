@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- step 2 copy css link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <nav>
@@ -27,6 +30,151 @@
             <a><div class="link">Search</div></a>
             <a><div class="link">Logo</div></a>
         </div>
+
     </nav>
+
+  
+
+<!-- <div class="bg" style="height: 70px; width:100vw; black; position: absolute; top: 0;"></div> -->
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>iPhone 16 pro</h1>
+            <h2>Built for Apple Intelligence</h2>
+            <div class="buttons">
+                <button class="btn btn-secondary">Learn More</button>
+                <button class="btn btn-primary">Buy Now</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>iPhone 16 pro</h1>
+            <h2>Best iphone</h2>
+            <div class="buttons">
+                <button class="btn btn-secondary">Learn More</button>
+                <button class="btn btn-primary">Buy Now</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="two">
+        <div class="inner left">
+            <div class="content">
+                <h1>iPad Pro</h1>
+                <h2>Incredibly Thin</h2>
+                <div class="buttons">
+                    <button class="btn btn-secondary">Learn More</button>
+                    <button class="btn btn-primary">Buy Now</button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="inner right">
+            <div class="content">
+                <h1>Macbook Pro</h1>
+                <h2>Incredibly Thin</h2>
+                <div class="buttons">
+                    <button class="btn btn-secondary">Learn More</button>
+                    <button class="btn btn-primary">Buy Now</button>
+
+            </div>
+        </div>
+    </section>
+    <section class="slideshow">
+
+
+        <!-- //step 1 copy html from swiper -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="./s1.jpg" alt="s1" height="100%" width="100%"></div>
+          <div class="swiper-slide">
+            <img src="./s2.jpg" alt="s2" height="100%" width="100%">
+          </div>
+          <div class="swiper-slide">
+            <img src="./s3.jpg" alt="s3" height="100%" width="100%">
+          </div>
+          <div class="swiper-slide">
+            <img src="./s4.jpg" alt="s4" height="100%" width="100%">
+          </div>
+          <div class="swiper-slide">
+            <img src="./s5.jpg" alt="s5" height="100%" width="100%">
+          </div>
+          
+
+          
+
+
+        </div>
+        <div class="swiper-pagination" ></div>
+    </div>
+
+</section>
+    
+
+    <footer>
+        <div class="deepanshu">
+            <div class="col1">
+            <ul>
+                <li>Privacy Policy</li>
+                <li>Terms of Use</li>
+                <li>Sales and Refunds</li>
+                <li>Legal</li>
+                <li>Site Map</li>
+            </ul>
+            <h1>Contact</h1>
+            <ul>
+                <li>Contact Apple</li>
+                <li>Apple Store</li>
+                <li>Apple Camp</li>
+                <li>Apple Store App</li>
+                <li>For Kids</li>
+            </ul>
+        </div>
+            <ul>
+                <li>Apple Values</li>
+                <li>About Apple</li>
+                <li>Apple Leadership</li>
+                <li>Career Opportunities</li>
+                <li>Investors</li>
+            </ul>
+            <ul>
+                <li>Newsroom</li>
+                <li>Apple Values</li>
+                <li>Apple Newsroom</li>
+                <li>Apple Values</li>
+                <li>Apple Newsroom</li>
+            </ul>
+            <ul>
+                <li>Newsroom</li>
+                <li>Apple Values</li>
+                <li>Apple Newsroom</li>
+                <li>Apple Values</li>
+                <li>Apple Newsroom</li>
+            </ul>
+        </div>
+    </footer>
+
+<!-- step 3 copy js -->
+
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+     var swiper = new Swiper(".mySwiper", {
+        autoplay:{
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+      slidesPerView: 1,
+      spaceBetween: 0,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+
 </body>
 </html>
