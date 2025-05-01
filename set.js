@@ -58,3 +58,54 @@ for (let ele of arr2) {
 }
 
 console.log(duplicated);
+
+
+
+const browsingData = [
+    { userId: "U1", viewedCategories: new Set(["Men's Wear", "Kids"]) },
+    { userId: "U2", viewedCategories: new Set(["Women's Wear", "Men's Wear"]) },
+    { userId: "U3", viewedCategories: new Set(["Women's Wear"]) },
+    { userId: "U4", viewedCategories: new Set(["Men's Wear", "Women's Wear", "Electronics"]) },
+  ];
+
+  function findUsers(users, A,B){
+    return users
+        .filter(
+        (user =>
+            user.viewedCategories.has(A) && 
+            user.viewedCategories.has(B)
+        )
+    )
+    .map(user=>user.userId)
+  }
+
+    const CategoryA="Men's Wear";
+    const CategoryB="Electronics";
+
+
+  const target = findUsers(browsingData,CategoryA, CategoryB);
+  console.log(target);
+  
+   
+
+  
+
+const setA = new Set([1, 2, 3]);
+const setB = new Set([3, 4, 5, 5, 3, 3, 4, 3, 5, 2]);
+console.log(setB)
+
+const setC= new Set(1, 2, 3, 4, 5);
+console.log(setC);
+
+function intersection(setA, setB){
+    const result = [];
+    for(let ele of setA){
+        if(setB.has(ele)){
+            result.push(ele);
+        }
+    }
+    console.log( result);
+
+}
+
+intersection(setA, setB);

@@ -210,20 +210,23 @@ margin: 0 5px;
 footer{
     height: 100vh;
     width: 100vw;
-    background-color: brown;
+    /* background-color: rgba(165, 42, 42, 0.101); */
     padding: 20px;
 }
 
 
 .deepanshu{
     height: 100%;
-    width: 1000px;
+    width: 95vw;
     margin: 0 auto;
     background-color: white;
     display: grid;
     grid-template-columns: repeat(5, auto);
 }
 
+.mobile{
+    display: none;
+}
 
 .deepanshu ul{
     list-style: none;
@@ -236,4 +239,120 @@ footer{
     /* grid-column: 2/4; */
 }
 
+/* mobile screen */
+@media (max-width:768px){
 
+    .deepanshu{
+        display: none;
+    }
+
+    .mobile{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        }
+
+        .dayein > *{
+            padding: 0 2px;
+        }
+
+    footer{
+        height: 65vh;
+    }
+
+    .accordion ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .accordion ul li{
+        padding: 10px 0;
+        font-size:1.2rem;
+        border-bottom: 1px solid #ccc;
+        text-decoration: none;
+        display: flex;
+        justify-content: space-between;
+        color: #7b7b7b;
+    }
+
+    .btn-primary, .btn-secondary{
+        font-size: 0.7rem;
+    }
+
+    .upper, .lower{
+        margin: 10px auto;
+        color: #7b7b7b;
+
+    }
+
+    .hero-content h1{
+        font-size:2rem
+    }
+
+    .hero-content h2{
+        font-size:1.5rem;
+    }
+
+    .lower{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+
+    .upper, .lower p{
+        font-size: 0.8rem;
+        margin: 5px 0;
+    }
+
+    .swiper{
+        height: 40vh;
+    }
+
+    .swiper-slide{
+        width: 100vw;
+        height: 35vh;
+        transform: scale(1); /* Adjust scale for better preview */
+        padding: 0;
+        margin: 0;
+    }
+
+.swiper-slide-active {
+  width: 100vw !important;
+  padding: 0;
+  margin: 0;
+     transition : transform 0.9s ease;
+ }
+
+ .swiper-slide img{
+    width: 90vw;
+    object-fit:contain;
+ }  
+ .two{
+    height: 1000px;
+    grid-template-columns:1fr;
+    grid-template-rows:1fr 1fr;
+    gap: 10px;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+}
+
+.grid{
+    display: none;
+}
+
+}
+
+
+/* object-fit
+image -> object-fit: cover; -> image will cover the entire area of the container, but it may be cropped
+image -> object-fit: contain; -> image will be resized to fit within the container, maintaining its aspect ratio, but may leave empty space
+image -> object-fit: fill; -> image will be stretched to fill the entire container, regardless of its aspect ratio, which may cause distortion
+image -> object-fit: none; -> image will not be resized or cropped, and will maintain its original size and aspect ratio
+image -> object-fit: scale-down; -> image will be resized to fit within the container, but will not be stretched or cropped, and will maintain its original size and aspect ratio
+
+*/
